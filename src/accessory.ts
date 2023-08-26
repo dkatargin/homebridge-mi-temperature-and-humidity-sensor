@@ -55,8 +55,8 @@ class MiSensor implements AccessoryPlugin {
   }
 
   getScanTimeout() {
-    if Number.isInteger(this.config.scanTimeout){
-      return parseInt(this.config.scanTimeout, 10)
+    if (Number.isInteger(this.config.scanTimeout)){
+      return parseInt(this.config.scanTimeout, 10) * 1000
     }
     return 60000 // default scan interval is 1 minute
   }
